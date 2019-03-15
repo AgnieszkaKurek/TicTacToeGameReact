@@ -66,3 +66,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+## Continuous Integration
+Check travis pipeline:
+[![Build Status](https://travis-ci.org/AgnieszkaKurek/TicTacToeGameReact.svg?branch=master)](https://travis-ci.org/AgnieszkaKurek/TicTacToeGameReact)
