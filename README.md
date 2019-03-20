@@ -36,5 +36,6 @@ Check travis pipeline:
 
 # Continuous Delivery
 Application is automaticaly deployed into https://agnieszkakurek.github.io/TicTacToeGameReact/ on every push to master by 
+[Travis pipeline](https://travis-ci.org/AgnieszkaKurek/TicTacToeGameReact)
 
 * check [gh-pages branch](https://agnieszkakurek.github.io/TicTacToeGameReact/)
