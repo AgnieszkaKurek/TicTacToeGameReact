@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/TicTacToeGameReact/static/css/main.b569b993.chunk.css"
   },
   {
-    "revision": "b70f2708445077c546a396eab3f88f9f",
+    "revision": "217c42b5d2a266ba5206c5ed2886ec91",
     "url": "/TicTacToeGameReact/index.html"
   }
 ];
