@@ -33,3 +33,9 @@ Your app is ready to be deployed!
 ## Continuous Integration
 Check travis pipeline:
 [![Build Status](https://travis-ci.org/AgnieszkaKurek/TicTacToeGameReact.svg?branch=master)](https://travis-ci.org/AgnieszkaKurek/TicTacToeGameReact)
+
+## Continuous Delivery
+Application is deployed into https://agnieszkakurek.github.io/TicTacToeGameReact on every push to master by [Travis pipeline](https://travis-ci.org/AgnieszkaKurek/TicTacToeGameReact)
+In order to get the content of the deployed files you may:
+* run `npm run deploy`
+* check [gh-pages branch](https://github.com/AgnieszkaKurek/TicTacToeGameReact/tree/gh-pages)
