@@ -1,12 +1,66 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+class Box extends React.Component {
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+  render() {
+    return (
+      <button className="box" data-position={this.props.boxPosition}>
+        <canvas width="180" height="180" />
+        {/* TODO */}
+      </button>
+    );
+  }
+}
+
+class Board extends React.Component {
+
+  rendererBox(boxPosition) {
+    return <Box boxPosition={boxPosition} />;
+  }
+
+  render() {
+    return (
+      <div className="gameBoard">
+        <div className="board-row">
+          {this.rendererBox(0)}
+          {this.rendererBox(1)}
+          {this.rendererBox(2)}
+        </div>
+        <div className="board-row">
+          {this.rendererBox(3)}
+          {this.rendererBox(4)}
+          {this.rendererBox(5)}
+        </div>
+        <div className="board-row">
+          {this.rendererBox(6)}
+          {this.rendererBox(7)}
+          {this.rendererBox(8)}
+        </div>
+      </div>
+    );
+  }
+}
+
+class Game extends React.Component {
+  render() {
+    return (
+      <div className="container">
+        <header class="header">
+          <h1>Tic Tac Toe</h1>
+        </header>
+        <div >
+          <Board />
+        </div>
+      </div>
+    );
+  }
+}
+
+// ========================================
+
+ReactDOM.render(
+  <Game />,
+  document.getElementById('root')
+);
