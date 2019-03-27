@@ -4,8 +4,8 @@ export class Players extends React.Component {
   render() {
     return (
     <div className="player">
-        <span className="invisible" id="playerX">PlayerX</span>
-        <span className="invisible" id="playerO">PlayerO</span>
+        <span>PlayerX</span>
+        <span>PlayerO</span>
     </div>
     );
   }

@@ -12,7 +12,7 @@ export class Game extends React.Component {
       <div className="container">
         <h1>Tic Tac Toe</h1>
         <aside className="left">
-         <div id="playerInfo">
+         <div>
              <h2>Who's Turn</h2>
              <Players/>
          </div>

@@ -5,13 +5,13 @@ export class Punctation extends React.Component {
     return (
         <div class="player">
         <div>Score PlayerX:
-            <span id="scorePlayerX"></span>
+            <span></span>
         </div>
         <div>Score PlayerO:
-            <span id="scorePlayerO"></span>
+            <span></span>
         </div>
         <div>Number of draw:
-            <span id="numberOfDraws"></span>
+            <span></span>
         </div>
     </div>
     );

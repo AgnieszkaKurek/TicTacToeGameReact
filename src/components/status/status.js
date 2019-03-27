@@ -5,9 +5,9 @@ export class Status extends React.Component {
   render() {
     return (
         <div>
-        <span className="winnerStatus" id="winnerX">Winer is X</span>
-        <span className="winnerStatus" id="winnerO">Winer is O</span>
-        <span className="winnerStatus" id="draw">Draw</span>
+        <span className="winnerStatus">Winer is X</span>
+        <span className="winnerStatus">Winer is O</span>
+        <span className="winnerStatus">Draw</span>
     </div>
     );
   }
