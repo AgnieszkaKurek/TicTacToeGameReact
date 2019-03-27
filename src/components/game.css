@@ -1,10 +1,6 @@
-
-h1 {
+header {
   color: #9966CC;
   width: 100%;
-}
-h2 {
-  color: #9977ff;
 }
 
 .container {
@@ -18,7 +14,7 @@ h2 {
   width: 150px;
 }
 
-.game-area {
+article {
   order: 2;
   max-width: 600px;
   margin: 5px;
