@@ -23,3 +23,8 @@ h2 {
   max-width: 600px;
   margin: 5px;
 }
+
+.right {
+  order: 3;
+  width: 150px;
+}
