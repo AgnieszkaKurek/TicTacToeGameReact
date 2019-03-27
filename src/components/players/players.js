@@ -1,5 +1,4 @@
 import React from 'react';
-import './players.css';
 
 export class Players extends React.Component {
   render() {

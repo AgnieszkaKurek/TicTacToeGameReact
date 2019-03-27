@@ -4,6 +4,7 @@ import { Board } from '../board/board';
 import { Button } from '../button/button';
 import { Players } from '../players/players';
 import { Punctation } from '../punctation/punctation';
+import { Status } from '../status/status';
 
 export class Game extends React.Component {
   render() {
@@ -19,6 +20,7 @@ export class Game extends React.Component {
         <div className="game-area">
         <Board />
         <Button/>
+        <Status/>
         </div>
         <aside class="right">
             <h2>Punctation</h2>
