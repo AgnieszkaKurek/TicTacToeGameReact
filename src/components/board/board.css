@@ -1,0 +1,11 @@
+.game-board {
+  clear: both;
+  display: table;
+  border: 1px solid #dadada;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.game-board:focus {
+  outline: none;
+}
