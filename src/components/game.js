@@ -13,10 +13,15 @@ export class Game extends React.Component {
     this.game = new TicTacToeGame();
   }
 
-  handleMove(boxPosition) {
-    console.log(boxPosition);
+  handleMoveFromGame(boxPosition) {
+    console.log(`handle move from game with positon: ${boxPosition}`);
     const isEmpty = this.game.isPositionEmpty(boxPosition);
     console.log(isEmpty);
+  }
+
+  handleClick(boxPosition) {
+    this.game.move(boxPosition);
+    console.log(`box from position ${boxPosition} clicked`);
   }
 
   render() {
@@ -27,7 +32,9 @@ export class Game extends React.Component {
           <PlayerInfo />
         </aside>
         <article>
-          <Board handleMove={(boxPosition) => this.handleMove(boxPosition)} />
+          <Board
+            handleMoveFromBoard={(boxPosition) => this.handleMoveFromGame(boxPosition)}
+            handleClick={(boxPosition) => this.handleClick(boxPosition)} />
           <ResetButton />
           <Status />
         </article>
