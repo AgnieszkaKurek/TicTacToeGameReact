@@ -11,17 +11,22 @@ export class Game extends React.Component {
   constructor(props) {
     super(props);
     this.game = new TicTacToeGame();
+    this.state = this.getStateFromGame();
   }
 
-  handleMoveFromGame(boxPosition) {
-    console.log(`handle move from game with positon: ${boxPosition}`);
-    const isEmpty = this.game.isPositionEmpty(boxPosition);
-    console.log(isEmpty);
+  setStateFromGame() {
+    this.setState(this.getStateFromGame());
+  }
+
+  getStateFromGame() {
+    return {
+      board: this.game.board
+    };
   }
 
   handleClick(boxPosition) {
     this.game.move(boxPosition);
-    console.log(`box from position ${boxPosition} clicked`);
+    this.setStateFromGame();
   }
 
   render() {
@@ -32,8 +37,7 @@ export class Game extends React.Component {
           <PlayerInfo />
         </aside>
         <article>
-          <Board
-            handleMoveFromBoard={(boxPosition) => this.handleMoveFromGame(boxPosition)}
+          <Board board={this.state.board}
             handleClick={(boxPosition) => this.handleClick(boxPosition)} />
           <ResetButton />
           <Status />

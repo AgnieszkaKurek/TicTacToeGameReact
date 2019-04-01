@@ -13,3 +13,15 @@
 .box:hover {
   background: #fff;
 }
+
+.box>span {
+  font-size: 150px;
+}
+
+.player-x {
+  color: #388e3c;
+}
+
+.player-o {
+  color: #ff3399;
+}
