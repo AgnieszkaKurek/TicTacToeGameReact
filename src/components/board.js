@@ -10,9 +10,11 @@ export class Board extends React.Component {
   }
 
   renderBox(boxPosition) {
-    return <Box boxPosition={boxPosition}
-    handleMoveFromBox={(boxPosition) => this.handleMoveFromBoard(boxPosition)}
-    handleClick={(boxPosition) => this.props.handleClick(boxPosition)}/>
+    return <Box
+      boxState={this.props.board[boxPosition]}
+      boxPosition={boxPosition}
+      handleMoveFromBox={(boxPosition) => this.handleMoveFromBoard(boxPosition)}
+      handleClick={(boxPosition) => this.props.handleClick(boxPosition)} />
   }
 
   render() {

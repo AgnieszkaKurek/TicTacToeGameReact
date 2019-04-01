@@ -1,20 +1,23 @@
 import React from 'react';
 import './box.css';
+import { TicTacToeGamePlayers } from '../models/ticTacToeGamePlayers';
 
 export class Box extends React.Component {
-
-  handleMoveFromBox() {
-    console.log(`handle move from box with position ${this.props.boxPosition}`)
-    this.props.handleMoveFromBox(this.props.boxPosition);
-  }
-
   render() {
     return (
-      <button className="box"
-        onMouseEnter={() => this.handleMoveFromBox()}
+      <div className="box"
         onClick={() => this.props.handleClick(this.props.boxPosition)}>
-        <canvas width="180" height="180" />
-      </button>
+        {(() => {
+          switch (this.props.boxState) {
+            case TicTacToeGamePlayers.X:
+              return <span className="player-x">X</span>;
+            case TicTacToeGamePlayers.O:
+              return <span className="player-o">O</span>;
+            default:
+              return <span></span>;
+          }
+        })()}
+      </div>
     );
   }
 }
