@@ -1,0 +1,11 @@
+h2 {
+    color: #9977ff;
+}
+
+.next-player-o {
+    display: none;
+}
+
+.next-player-x {
+    display: none;
+}

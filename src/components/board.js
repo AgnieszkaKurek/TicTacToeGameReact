@@ -4,16 +4,10 @@ import { Box } from './box';
 
 export class Board extends React.Component {
 
-  handleMoveFromBoard(boxPosition) {
-    console.log(`handle move from board with positon ${boxPosition}`)
-    this.props.handleMoveFromBoard(boxPosition);
-  }
-
   renderBox(boxPosition) {
     return <Box
       boxState={this.props.board[boxPosition]}
       boxPosition={boxPosition}
-      handleMoveFromBox={(boxPosition) => this.handleMoveFromBoard(boxPosition)}
       handleClick={(boxPosition) => this.props.handleClick(boxPosition)} />
   }
 
