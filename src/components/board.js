@@ -1,6 +1,7 @@
 import React from 'react';
 import './board.css';
 import { Box } from './box';
+import { TicTacToeGamePlayers } from '../models/ticTacToeGamePlayers';
 
 export class Board extends React.Component {
 
@@ -8,12 +9,20 @@ export class Board extends React.Component {
     return <Box
       boxState={this.props.board[boxPosition]}
       boxPosition={boxPosition}
-      handleClick={(boxPosition) => this.props.handleClick(boxPosition)} />
+      handleClick={(boxPosition) => this.props.handleClick(boxPosition)} 
+      />
   }
 
   render() {
+    let dataBoxState = "";
+    if(this.props.nextPlayer === TicTacToeGamePlayers.X){
+      dataBoxState += "player-x";
+    }
+    else { dataBoxState += "player-o"}
+    
     return (
-      <div className="game-board">
+      <div className="game-board"
+      data-box-state ={dataBoxState}>
         <div>
           {this.renderBox(0)}
           {this.renderBox(1)}
