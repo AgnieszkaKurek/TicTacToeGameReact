@@ -9,3 +9,11 @@
 .game-board:focus {
   outline: none;
 }
+
+[data-box-state="player-x"]:hover{
+  cursor: url(icons/cross.png), pointer;
+}
+
+[data-box-state="player-o"]:hover{
+  cursor: url(icons/circle.png), pointer;
+}

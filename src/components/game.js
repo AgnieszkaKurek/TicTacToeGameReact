@@ -12,6 +12,7 @@ export class Game extends React.Component {
     super(props);
     this.game = new TicTacToeGame();
     this.state = this.getStateFromGame();
+
   }
 
   setStateFromGame() {
@@ -20,10 +21,12 @@ export class Game extends React.Component {
 
   getStateFromGame() {
     return {
-      board: this.game.board
+      board: this.game.board,
+      nextPlayer:this.game.nextPlayer
+    
     };
   }
-
+  
   handleClick(boxPosition) {
     this.game.move(boxPosition);
     this.setStateFromGame();
@@ -34,11 +37,14 @@ export class Game extends React.Component {
       <div className="container">
         <header>Tic Tac Toe</header>
         <aside className="left">
-          <PlayerInfo />
+          <PlayerInfo nextPlayer={this.state.nextPlayer} />
         </aside>
         <article>
-          <Board board={this.state.board}
-            handleClick={(boxPosition) => this.handleClick(boxPosition)} />
+          <Board
+            board={this.state.board}
+            handleClick={(boxPosition) => this.handleClick(boxPosition)} 
+            nextPlayer={this.state.nextPlayer} 
+            />
           <ResetButton />
           <Status />
         </article>
