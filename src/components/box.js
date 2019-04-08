@@ -3,6 +3,7 @@ import './box.css';
 import { TicTacToeGamePlayers } from '../models/ticTacToeGamePlayers';
 
 export class Box extends React.Component {
+
   render() {
     return (
       <div className="box"
