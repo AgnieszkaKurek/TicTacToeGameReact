@@ -14,9 +14,7 @@ export class Game extends React.Component {
     this.state = this.getStateFromGame();
   }
 
-  setStateFromGame() {
-    this.setState(this.getStateFromGame());
-  }
+  setStateFromGame = () => this.setState(this.getStateFromGame());
 
   getStateFromGame() {
     return {
@@ -25,11 +23,10 @@ export class Game extends React.Component {
       status: this.game.status(),
     };
   }
-  
+
   handleClick(boxPosition) {
     this.game.move(boxPosition);
     this.setStateFromGame();
-    
   }
 
   render() {
@@ -44,11 +41,9 @@ export class Game extends React.Component {
             board={this.state.board}
             handleClick={(boxPosition) => this.handleClick(boxPosition)}
             nextPlayer={this.state.nextPlayer}
-            />
-          <ResetButton />
-          <Status 
-          status={this.state.status}
           />
+          <ResetButton />
+          <Status status={this.state.status} />
         </article>
         <aside className="right">
           <Punctation />

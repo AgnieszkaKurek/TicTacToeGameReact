@@ -15,7 +15,7 @@ export class PlayerInfo extends React.Component {
             case TicTacToeGamePlayers.O:
               return <span>Player O</span>;
             default:
-              return <span></span>;
+              return;
           }
         })()}
       </div>
