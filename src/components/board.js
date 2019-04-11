@@ -15,7 +15,6 @@ export class Board extends React.Component {
     />
   }
 
-
   render() {
     return (
       <div className="game-board" data-board-players-state={this.getBoardNextPlayerStatus()}>
