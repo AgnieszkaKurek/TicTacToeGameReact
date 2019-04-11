@@ -10,10 +10,10 @@
   outline: none;
 }
 
-[data-board-players-state="player-x"]:hover{
+[data-board-players-state="player-x"] :hover {
   cursor: url(icons/cross.png), pointer;
 }
 
-[data-board-players-state="player-o"]:hover{
+[data-board-players-state="player-o"] :hover {
   cursor: url(icons/circle.png), pointer;
 }
