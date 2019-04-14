@@ -1,14 +1,12 @@
 import React from 'react';
 import './board.css';
 import { Box } from './box';
-import { TicTacToeGamePlayers } from '../models/ticTacToeGamePlayers';
 
 export class Board extends React.Component {
 
-  getBoardNextPlayerStatus = () => this.props.nextPlayer === TicTacToeGamePlayers.X ? "player-x" : "player-o";
-
   renderBox(boxPosition) {
     return <Box
+      nextPlayer={this.props.nextPlayer}
       boxState={this.props.board[boxPosition]}
       boxPosition={boxPosition}
       handleClick={(boxPosition) => this.props.handleClick(boxPosition)}
@@ -17,7 +15,7 @@ export class Board extends React.Component {
 
   render() {
     return (
-      <div className="game-board" data-board-players-state={this.getBoardNextPlayerStatus()}>
+      <div className="game-board">
         <div>
           {this.renderBox(0)}
           {this.renderBox(1)}
