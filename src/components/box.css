@@ -25,3 +25,11 @@
 .player-o {
   color: #ff3399;
 }
+
+.box[data-box-state="player-x"]:hover {
+  cursor: url(icons/cross.png), pointer;
+}
+
+.box[data-box-state="player-o"]:hover {
+  cursor: url(icons/circle.png), pointer;
+}
