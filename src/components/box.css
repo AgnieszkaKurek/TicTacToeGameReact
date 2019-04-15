@@ -33,3 +33,10 @@
 .box[data-box-state="player-o"]:hover {
   cursor: url(icons/circle.png), pointer;
 }
+
+[data-box-state="movingDisabled"] {
+  cursor: not-allowed;
+}
+[data-box-state="movingDisabled"]:hover{
+  background: #f1f1f1;
+}
