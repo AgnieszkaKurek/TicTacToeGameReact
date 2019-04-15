@@ -4,7 +4,7 @@ import { TicTacToeGamePlayers } from '../models/ticTacToeGamePlayers';
 
 export class Box extends React.Component {
 
-  getBoardNextPlayerStatus = () => this.props.boxState !== undefined ? "movingDisabled" : this.props.nextPlayer === TicTacToeGamePlayers.X ? "player-x" : "player-o";
+  getBoardNextPlayerStatus = () => this.props.boxState !== undefined ? "moving-disabled" : this.props.nextPlayer === TicTacToeGamePlayers.X ? "player-x" : "player-o";
 
   renderBoxSymbol() {
     switch (this.props.boxState) {
