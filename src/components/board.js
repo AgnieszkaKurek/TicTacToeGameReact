@@ -10,6 +10,7 @@ export class Board extends React.Component {
       boxState={this.props.board[boxPosition]}
       boxPosition={boxPosition}
       handleClick={(boxPosition) => this.props.handleClick(boxPosition)}
+      status={this.props.status}
     />
   }
 
