@@ -41,6 +41,7 @@ export class Game extends React.Component {
             board={this.state.board}
             handleClick={(boxPosition) => this.handleClick(boxPosition)}
             nextPlayer={this.state.nextPlayer}
+            status={this.state.status}
           />
           <ResetButton />
           <Status status={this.state.status} />

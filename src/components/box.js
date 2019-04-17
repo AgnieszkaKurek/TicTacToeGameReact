@@ -1,11 +1,21 @@
 import React from 'react';
 import './box.css';
 import { TicTacToeGamePlayers } from '../models/ticTacToeGamePlayers';
+import { TicTacToeGameStatus } from '../models/ticTacToeGameStatus';
 
 export class Box extends React.Component {
 
-  getBoardNextPlayerStatus = () =>
-    this.props.boxState ? "moving-disabled" : this.props.nextPlayer === TicTacToeGamePlayers.X ? "player-x" : "player-o";
+  getBoxState() {
+    if (this.props.boxState || this.props.status !== TicTacToeGameStatus.STATUS_UNFINISHED)
+      return "moving-disabled";
+    return this.props.nextPlayer === TicTacToeGamePlayers.X ? "player-x" : "player-o";
+  }
+
+  handleClick() {
+    if (this.props.status === TicTacToeGameStatus.STATUS_UNFINISHED) {
+      this.props.handleClick(this.props.boxPosition);
+    }
+  }
 
   renderBoxSymbol() {
     switch (this.props.boxState) {
@@ -21,8 +31,8 @@ export class Box extends React.Component {
   render() {
     return (
       <div className="box"
-        data-box-state={this.getBoardNextPlayerStatus()}
-        onClick={() => this.props.handleClick(this.props.boxPosition)}>
+        data-box-state={this.getBoxState()}
+        onClick={() => this.handleClick()}>
         {this.renderBoxSymbol()}
       </div>
     );
