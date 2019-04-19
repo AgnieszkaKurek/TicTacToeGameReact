@@ -21,6 +21,7 @@ export class Game extends React.Component {
       board: this.game.board,
       nextPlayer: this.game.nextPlayer,
       status: this.game.status(),
+      winningCombination: this.game.getWinningCombination(),
     };
   }
 
@@ -42,6 +43,7 @@ export class Game extends React.Component {
             handleClick={(boxPosition) => this.handleClick(boxPosition)}
             nextPlayer={this.state.nextPlayer}
             status={this.state.status}
+            winningCombination={this.state.winningCombination}
           />
           <ResetButton />
           <Status status={this.state.status} />
