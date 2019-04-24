@@ -41,3 +41,9 @@
 .box.moving-disabled:hover {
   background: #f1f1f1;
 }
+
+.box.highlight-as-winning-box,
+.box.highlight-as-winning-box:hover{
+    background: #ffff99;
+    cursor: not-allowed;
+}
