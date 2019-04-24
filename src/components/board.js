@@ -4,6 +4,14 @@ import { Box } from './box';
 
 export class Board extends React.Component {
 
+  isWinningBox(boxPosition) {
+    let winningCombination = this.props.winningCombination;
+    if (!winningCombination) return false;
+    return boxPosition === winningCombination.position1 ||
+      boxPosition === winningCombination.position2 ||
+      boxPosition === winningCombination.position3;
+  }
+
   renderBox(boxPosition) {
     return <Box
       nextPlayer={this.props.nextPlayer}
@@ -11,6 +19,7 @@ export class Board extends React.Component {
       boxPosition={boxPosition}
       handleClick={(boxPosition) => this.props.handleClick(boxPosition)}
       status={this.props.status}
+      isWinningBox={this.isWinningBox(boxPosition)}
     />
   }
 
