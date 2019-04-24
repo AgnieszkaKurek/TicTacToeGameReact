@@ -5,13 +5,7 @@ import { Box } from './box';
 export class Board extends React.Component {
 
   getWinningCombination() {
-    let winningCombination = this.props.winningCombination
-    if (winningCombination === undefined) {
-      return false
-    }
-    else if (winningCombination) {
-      return winningCombination;
-    }
+    return this.props.winningCombination ? this.props.winningCombination : false;
   }
 
   renderBox(boxPosition) {
@@ -27,8 +21,7 @@ export class Board extends React.Component {
 
   render() {
     return (
-      <div className="game-board"
-      >
+      <div className="game-board">
         <div>
           {this.renderBox(0)}
           {this.renderBox(1)}

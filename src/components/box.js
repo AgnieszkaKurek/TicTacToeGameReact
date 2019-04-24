@@ -6,12 +6,14 @@ import { TicTacToeGameStatus } from '../models/ticTacToeGameStatus';
 export class Box extends React.Component {
 
 
-  showWinningCombination() {
+  getWinningCombinationClass() {
     let winningCombination = this.props.winningCombination;
     if (this.props.boxPosition === winningCombination.position1 ||
-      this.props.boxPosition === winningCombination.position2 || this.props.boxPosition === winningCombination.position3) {
-      return "highlight-as-winning-box";
+      this.props.boxPosition === winningCombination.position2 ||
+      this.props.boxPosition === winningCombination.position3) {
+      return "winning-box";
     }
+    return "";
   }
 
   getCursorClass() {
@@ -23,8 +25,8 @@ export class Box extends React.Component {
   getBoxClasses() {
     const cursor = this.getCursorClass();
     const movingEnabled = this.props.status === TicTacToeGameStatus.STATUS_UNFINISHED ? "moving-enabled" : "moving-disabled";
-    const winningPosition = this.showWinningCombination();
-    return `box ${cursor} ${movingEnabled} ${winningPosition}`;
+    const winningCombinationClass = this.getWinningCombinationClass();
+    return `box ${cursor} ${movingEnabled} ${winningCombinationClass}`;
   }
 
   handleClick() {
