@@ -45,7 +45,7 @@ export class Game extends React.Component {
             status={this.state.status}
             winningCombination={this.state.winningCombination}
           />
-          <ResetButton />
+          <ResetButton status={this.state.status} />
           <Status status={this.state.status} />
         </article>
         <aside className="right">
