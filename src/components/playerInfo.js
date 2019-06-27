@@ -1,6 +1,7 @@
 import React from 'react';
 import './playerInfo.css';
 import { TicTacToeGamePlayers } from '../models/ticTacToeGamePlayers';
+import { TicTacToeGameStatus } from '../models/ticTacToeGameStatus';
 
 export class PlayerInfo extends React.Component {
 
@@ -16,11 +17,18 @@ export class PlayerInfo extends React.Component {
   }
 
   render() {
-    return (
-      <div>
-        <h2>Who's Turn</h2>
-        {this.renderPlayerInfo()}
-      </div>
-    );
+    if (this.props.status === TicTacToeGameStatus.STATUS_UNFINISHED) {
+      return (
+        <div>
+          <h2>Who's Turn</h2>
+          {this.renderPlayerInfo()}
+        </div>
+      );
+    }
+    else {
+      return (
+        <div></div>
+      )
+    }
   }
 }

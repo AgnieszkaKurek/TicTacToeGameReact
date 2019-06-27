@@ -35,7 +35,8 @@ export class Game extends React.Component {
       <div className="container">
         <header>Tic Tac Toe</header>
         <aside className="left">
-          <PlayerInfo nextPlayer={this.state.nextPlayer} />
+          <PlayerInfo nextPlayer={this.state.nextPlayer} 
+          status={this.state.status} />
         </aside>
         <article>
           <Board
