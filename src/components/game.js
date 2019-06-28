@@ -6,28 +6,31 @@ import { PlayerInfo } from './playerInfo';
 import { Punctation } from './punctation';
 import { Status } from './status';
 import { TicTacToeGame } from '../models/ticTacToeGame';
+import { TicTacToeGameScore } from  '../models/tictTacToeGameScore';
 
 export class Game extends React.Component {
   constructor(props) {
     super(props);
     this.game = new TicTacToeGame();
-    this.state = this.getStateFromGame();
+    this.score = new TicTacToeGameScore();
+    this.state = this.getState();
   }
 
-  setStateFromGame = () => this.setState(this.getStateFromGame());
+  setStateFromGameAndScore = () => this.setState(this.getState());
 
-  getStateFromGame() {
+  getState() {
     return {
       board: this.game.board,
       nextPlayer: this.game.nextPlayer,
       status: this.game.status(),
       winningCombination: this.game.getWinningCombination(),
+      updateScore: this.score.update(),
     };
   }
 
   handleClick(boxPosition) {
     this.game.move(boxPosition);
-    this.setStateFromGame();
+    this.setStateFromGameAndScore();
   }
 
   render() {
@@ -51,7 +54,7 @@ export class Game extends React.Component {
           <Status status={this.state.status} />
         </article>
         <aside className="right">
-          <Punctation />
+          <Punctation  updateScore = {this.state.updateScore}/>
         </aside>
       </div>
     );
