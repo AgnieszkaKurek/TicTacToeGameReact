@@ -60,7 +60,8 @@ export class Game extends React.Component {
           <Punctation
             scorePlayerX={this.state.scorePlayerX}
             scorePlayerO={this.state.scorePlayerO}
-            numberOfDraws={this.score.numberOfDraws}
+            numberOfDraws={this.state.numberOfDraws}
+            status={this.state.status}
           />
         </aside>
       </div>
