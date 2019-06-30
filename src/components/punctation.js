@@ -5,15 +5,9 @@ import { TicTacToeGameStatus } from '../models/ticTacToeGameStatus';
 export class Punctation extends React.Component {
 
 
-  getScoreClasses(attribute) {
-    let status = this.props.status;
-    const highlightClass = status === TicTacToeGameStatus.STATUS_X_WINS &
-      attribute === TicTacToeGameStatus.STATUS_X_WINS ||
-      status === TicTacToeGameStatus.STATUS_O_WINS & attribute === TicTacToeGameStatus.STATUS_O_WINS ||
-      status === TicTacToeGameStatus.STATUS_DRAW & attribute === TicTacToeGameStatus.STATUS_DRAW
-      ? "score-highlight"
-      : "";
-    return `space-between-elem ${highlightClass} `;
+  getScoreClasses(context) {
+    const highlightClass = this.props.status === context ? "score-highlight" : "";
+    return `space-between-elem ${highlightClass}`;
   }
 
   render() {
