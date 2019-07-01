@@ -36,6 +36,11 @@ export class Game extends React.Component {
     this.setStateFromGameAndScore();
   }
 
+  handleReset() {
+    this.game.reset();
+    this.setStateFromGameAndScore();
+  }
+
   render() {
     return (
       <div className="container">
@@ -53,7 +58,10 @@ export class Game extends React.Component {
             status={this.state.status}
             winningCombination={this.state.winningCombination}
           />
-          <ResetButton status={this.state.status} />
+          <ResetButton
+            status={this.state.status}
+            handleReset={() => this.handleReset()}
+          />
           <Status status={this.state.status} />
         </article>
         <aside className="right">

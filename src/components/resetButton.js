@@ -9,7 +9,9 @@ export class ResetButton extends React.Component {
       return (<div></div>);
     }
     return (
-      <button className="reset-game">
+      <button
+        className="reset-game"
+        onClick={() => this.props.handleReset()}>
         Reset Game
       </button>
     )
