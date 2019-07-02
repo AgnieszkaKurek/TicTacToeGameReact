@@ -1,5 +1,5 @@
 # TicTacToeGame
-Tic-tac-toe game, created in javascript
+Tic-tac-toe game, created in javascript.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
