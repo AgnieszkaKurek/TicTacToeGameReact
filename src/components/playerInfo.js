@@ -1,5 +1,4 @@
 import React from 'react';
-import './playerInfo.css';
 import { TicTacToeGamePlayers } from '../models/ticTacToeGamePlayers';
 import { TicTacToeGameStatus } from '../models/ticTacToeGameStatus';
 

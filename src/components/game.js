@@ -72,6 +72,7 @@ export class Game extends React.Component {
             status={this.state.status}
           />
         </aside>
+        <footer>made by Aga</footer>
       </div>
     );
   }
