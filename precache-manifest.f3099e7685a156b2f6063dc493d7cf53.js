@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "0a59a84029938670115b",
-    "url": "/TicTacToeGameReact/static/css/main.c19db9f9.chunk.css"
+    "revision": "d8f981f91d35da30ec00",
+    "url": "/TicTacToeGameReact/static/css/main.d0eec904.chunk.css"
   },
   {
-    "revision": "0a59a84029938670115b",
-    "url": "/TicTacToeGameReact/static/js/main.6f86c99e.chunk.js"
+    "revision": "d8f981f91d35da30ec00",
+    "url": "/TicTacToeGameReact/static/js/main.a44a0978.chunk.js"
   },
   {
     "revision": "d659c85b9dd38a86ed04",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/TicTacToeGameReact/static/js/2.4952e05c.chunk.js"
   },
   {
-    "revision": "f73ff2f14ae4b489881da76a2a07c3bd",
+    "revision": "850a989eb1efdc6b53f78cc2dac9003c",
     "url": "/TicTacToeGameReact/index.html"
   }
 ];
