@@ -42,8 +42,24 @@
   background: #f1f1f1;
 }
 
-.box.winning-box,
-.box.winning-box:hover{
-    background: #ffff99;
-    cursor: not-allowed;
+.box.winning-box, .box.winning-box:hover {
+  background: #ffff99;
+  cursor: not-allowed;
+}
+
+@media(max-width:900px) {
+  .box {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media(max-width:700px) {
+  .box {
+    width: 100px;
+    height: 100px;
+  }
+  .box>span {
+    font-size: 100px;
+  }
 }

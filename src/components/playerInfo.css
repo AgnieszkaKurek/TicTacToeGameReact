@@ -1,3 +1,22 @@
-h2 {
+.status>span {
+    color: #ed4e6e;
+    font-size: 3em;
+    line-height: 1.75;
+}
+
+.playerInfo {
     color: #9977ff;
+}
+
+@media(max-width:880px) {
+    .status>span {
+        font-size: 2em;
+        line-height: 1.35;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .playerInfo {
+        font-size: 17px;
+    }
 }
